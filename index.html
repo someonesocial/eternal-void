@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eternal Void</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -83,12 +84,92 @@
         </div>
 
         <div class="section">
+            <h2>Extremely Long and Pointless Survey</h2>
+            <p>Please take a moment to fill out this comprehensive survey about absolutely nothing. Your responses will not be recorded, analyzed, or used for any purpose whatsoever.</p>
+            <form class="boring-form">
+                <div class="form-group">
+                    <label>Rate your current level of boredom (1-10):</label>
+                    <input type="range" min="1" max="10" value="5" disabled>
+                </div>
+                <div class="form-group">
+                    <label>How many times have you blinked while on this page?</label>
+                    <input type="number" placeholder="Please count carefully">
+                </div>
+                <div class="form-group">
+                    <label>Describe the color gray in exactly 500 words:</label>
+                    <textarea rows="8" placeholder="Write about gray..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Select your favorite type of waiting:</label>
+                    <select>
+                        <option>Waiting for paint to dry</option>
+                        <option>Waiting for grass to grow</option>
+                        <option>Waiting for nothing to happen</option>
+                        <option>Waiting for this page to become interesting</option>
+                    </select>
+                </div>
+                <button type="button" class="boring-button" onclick="alert('Thank you for wasting your time. Your submission has been discarded.')">Submit to Void</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Live Counter of Meaningless Things</h2>
+            <div class="counter-section">
+                <p>Seconds you've wasted on this page: <span id="time-counter">0</span></p>
+                <p>Number of pixels you've seen: <span id="pixel-counter">0</span></p>
+                <p>Estimated boredom level: <span id="boredom-counter">Calculating...</span></p>
+                <p>Progress towards enlightenment: <span id="progress-counter">0%</span></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Reading Exercise: The History of Watching Paint Dry</h2>
+            <div class="long-text">
+                <p>Chapter 1: The Early Years of Paint Observation</p>
+                <p>In the year 1823, a man named Herbert Dullsworth became the first documented person to deliberately watch paint dry for recreational purposes. He sat in his wooden chair for approximately 4 hours and 23 minutes, observing white paint as it slowly transformed from wet to dry on his kitchen wall. Herbert noted in his journal: "The experience was neither pleasant nor unpleasant. It simply was."</p>
+                
+                <p>Chapter 2: The Golden Age of Paint Watching (1850-1900)</p>
+                <p>The mid-19th century saw a surge in paint-watching enthusiasm. Clubs were formed where members would gather to collectively observe drying paint. The most famous of these was the "Society for the Appreciation of Gradual Moisture Evaporation" founded in 1867. Members would take turns reading aloud from dictionaries while watching paint dry, creating what historians now call "the ultimate exercise in purposeful boredom."</p>
+                
+                <p>Chapter 3: Modern Paint Watching Techniques</p>
+                <p>Today's paint watchers employ sophisticated techniques such as: sitting very still, breathing quietly, and maintaining focus on the subtle changes in paint texture. Advanced practitioners can detect moisture evaporation rates with their naked eye, though this skill requires years of dedicated, mind-numbing practice.</p>
+                
+                <p>Chapter 4: The Philosophy of Paint Observation</p>
+                <p>Renowned philosopher Dr. Mundania Tedium wrote extensively about the metaphysical implications of paint watching. In her 847-page thesis "On the Nature of Drying: A Contemplation of Temporal Stasis," she argues that watching paint dry is the purest form of human existence, free from the distractions of joy, excitement, or meaning.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Interactive Waiting Simulator</h2>
+            <p>Click the button below to experience the thrill of waiting for absolutely nothing to happen.</p>
+            <div class="waiting-simulator">
+                <button id="wait-button" onclick="startWaiting()">Begin Waiting Experience</button>
+                <div id="waiting-status" class="waiting-status"></div>
+                <div id="waiting-progress" class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Meditation Corner: Contemplating Emptiness</h2>
+            <p>Spend some time reflecting on these profound questions about nothingness:</p>
+            <ul class="meditation-list">
+                <li>If nothing happens, and no one is around to see it, did it still not happen?</li>
+                <li>What is the sound of one hand not clapping?</li>
+                <li>If a website exists but serves no purpose, does it truly exist?</li>
+                <li>How many shades of beige can you imagine while staring at gray?</li>
+                <li>What would you do if you had unlimited time and no interesting options?</li>
+            </ul>
+        </div>
+
+        <div class="section">
             <h2>Contact Information</h2>
-            <p>If you need to contact someone about this website, please reconsider. There is nothing to discuss. However, if you must, you may send your thoughts into the void.</p>
+            <p>If you need to contact someone about this website, please first complete the 47-step verification process by counting all the words on this page three times. If you get the same number each time, you may proceed to reconsider your decision to contact anyone.</p>
         </div>
 
         <footer>
-            <p>&copy; 2025 Eternal Void. All rights reserved. Not that there are any rights to reserve.</p>
+            <p>&copy; 2025 Eternal Void. All rights reserved. Not that there are any rights to reserve. This website has been viewed by <span id="visitor-counter">calculating...</span> people who had nothing better to do.</p>
         </footer>
     </div>
 </body>
