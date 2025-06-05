@@ -135,13 +135,48 @@ document.addEventListener('click', function() {
 // Simulate extremely slow loading for no reason
 function simulateSlowLoading() {
     const loadingElements = document.querySelectorAll('.section');
-    loadingElements.forEach(function(element, index) {
-        element.style.opacity = '0';
+    
+    // Add an initial painful delay before anything starts loading
+    setTimeout(function() {
+        // Show a loading message that serves no purpose
+        const loadingMessage = document.createElement('div');
+        loadingMessage.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            font-family: "Times New Roman", serif;
+            color: #666;
+            z-index: 9999;
+            text-align: center;
+        `;
+        loadingMessage.textContent = 'Loading... Please wait while we slowly reveal content that will disappoint you...';
+        document.body.appendChild(loadingMessage);
+        
+        // Remove loading message after an annoyingly long time
         setTimeout(function() {
-            element.style.transition = 'opacity 2s ease-in';
-            element.style.opacity = '1';
-        }, index * 500);
-    });
+            document.body.removeChild(loadingMessage);
+        }, 8000);
+        
+        loadingElements.forEach(function(element, index) {
+            element.style.opacity = '0';
+            setTimeout(function() {
+                // Make the transition painfully slow
+                element.style.transition = 'opacity 4s ease-in';
+                element.style.opacity = '1';
+                
+                // Add random additional delays to make it even more unpredictable and annoying
+                const randomExtraDelay = Math.random() * 2000;
+                setTimeout(function() {
+                    // Do nothing, just waste more time
+                }, randomExtraDelay);
+                
+            }, index * 1500 + 3000); // Much slower: 1.5 seconds between each + 3 second base delay
+        });
+    }, 2500); // Initial 2.5 second delay before anything happens
 }
 
 // Call slow loading on page load
