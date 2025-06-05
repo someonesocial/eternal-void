@@ -36,7 +36,7 @@ The website will be available at: `https://[your-username].github.io/eternal-voi
 
 - HTML5 (for structure)
 - CSS3 (for making everything as boring as possible)
-- No JavaScript (because that might be interesting)
+- JavaScript (minimal and uninspiring, used only to make things slower and more tedious)
 
 ## Development
 

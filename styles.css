@@ -383,6 +383,36 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 15px;
 }
 
+/* Styles for additional boring content sections */
+
+.time-waste-activities, .waiting-room-manual {
+    margin-top: 15px;
+}
+
+.time-waste-activities h3, .waiting-room-manual h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 16px;
+    border-bottom: 1px dotted #cccccc;
+    padding-bottom: 3px;
+}
+
+.time-waste-activities ul, .time-waste-activities ol,
+.waiting-room-manual ul, .waiting-room-manual ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.time-waste-activities li, .waiting-room-manual li {
+    margin-bottom: 5px;
+}
+
+.time-waste-activities p, .waiting-room-manual p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
 /* Ensure consistent boring typography */
 .guide-content em, .encyclopedia em, .weather-report em, .gray-list em,
 .masterclass em, .annual-report em, .wall-staring-guide em, .mundane-directory em,
