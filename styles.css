@@ -234,6 +234,35 @@ footer {
     line-height: 1.5;
 }
 
+/* Slider styles */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #f0f0f0; /* Neutral background color */
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #d0d0d0; /* Neutral thumb color */
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #d0d0d0; /* Neutral thumb color */
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
 /* No animations, no transitions, no hover effects - just pure boredom */
 /* Everything is intentionally static and lifeless */
 
