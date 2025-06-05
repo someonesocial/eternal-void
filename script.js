@@ -50,7 +50,7 @@ function startWaiting() {
     button.textContent = 'Currently Waiting...';
     
     let waitingTime = 0;
-    const totalWaitTime = 30; // 30 seconds of pure waiting
+    const totalWaitTime = 190; // 190 seconds of pure waiting
     
     status.textContent = 'Please wait while nothing happens...';
     
@@ -181,7 +181,69 @@ function generateBoringFact() {
         "The color beige gets its name from natural wool that hasn't been bleached.",
         "Standard copy paper is 8.5 by 11 inches in the United States.",
         "File cabinets are usually made of steel for durability.",
-        "The average office worker spends 6 hours a day looking at screens."
+        "The average person blinks 15-20 times per minute while reading.",
+        "A standard brick weighs approximately 4.5 pounds.",
+        "The average raindrop falls at 20 feet per second.",
+        "Concrete takes 28 days to reach full strength.",
+        "A typical doorknob is 36 inches from the floor.",
+        "The average human hair grows 0.5 inches per month.",
+        "Standard sidewalks are 4 feet wide in most cities.",
+        "A gallon of water weighs 8.34 pounds.",
+        "The average room temperature is 68-72 degrees Fahrenheit.",
+        "Standard ceiling height in homes is 8-9 feet.",
+        "A typical slice of bread is 0.5 inches thick.",
+        "The average walking speed is 3.1 miles per hour.",
+        "Salt dissolves in water at a rate of 36 grams per 100ml.",
+        "A standard envelope measures 4.125 by 9.5 inches.",
+        "The average person takes 20,000 breaths per day.",
+        "Tap water pressure is typically 40-60 PSI.",
+        "A standard light bulb socket is called an E26 base.",
+        "The average grocery store has 47,000 different products.",
+        "Standard toilet paper rolls have 1000 sheets.",
+        "A typical house key is 2.5 inches long.",
+        "The average person sleeps 26 years in their lifetime.",
+        "Standard parking meters accept quarters, dimes, and nickels.",
+        "A gallon of milk weighs about 8.6 pounds.",
+        "The average dishwashing cycle takes 2 hours and 15 minutes.",
+        "Standard speed bumps are 3-4 inches high.",
+        "A typical banana contains 105 calories.",
+        "The average person walks 7,500 steps per day.",
+        "Standard bathtubs hold 80 gallons of water.",
+        "A regular pencil eraser can erase a line 1 mile long.",
+        "The average person spends 5 years waiting in lines.",
+        "Standard doorways are 32 inches wide.",
+        "A typical paperback book has 250-300 pages.",
+        "The average person says 'hello' 47 times per day.",
+        "Standard lawn mower cutting height is 2.5-3 inches.",
+        "A regular tea bag contains 2-3 grams of tea.",
+        "The average person opens the refrigerator 22 times daily.",
+        "Standard kitchen counters are 36 inches high.",
+        "A typical rubber band can stretch 6 times its length.",
+        "The average person checks their phone 96 times per day.",
+        "Standard mailboxes are 41-45 inches from the ground.",
+        "A regular toothbrush has 2,500 bristles.",
+        "The average person spends 92 days on the toilet in their lifetime.",
+        "Standard stop signs are 30 inches wide.",
+        "A typical chicken egg weighs 2 ounces.",
+        "The average person yawns 23 times per day.",
+        "Standard shoelaces are 45-54 inches long.",
+        "A regular drinking straw is 8.5 inches long.",
+        "The average person throws away 4.5 pounds of trash daily.",
+        "Standard traffic lights change every 90-120 seconds.",
+        "A typical cotton t-shirt weighs 6 ounces.",
+        "The average person spends 3 hours and 15 minutes eating daily.",
+        "Standard elevator buttons are 0.75 inches in diameter.",
+        "A regular postage stamp weighs 0.2 grams.",
+        "The average person blinks 17,000 times per day.",
+        "Standard newspaper pages are 22.75 inches tall.",
+        "A typical shovel blade is 9.5 inches wide.",
+        "The average person uses 80-100 gallons of water daily.",
+        "Standard park benches are 18 inches deep.",
+        "A regular golf ball has 336 dimples.",
+        "The average person spends 7 minutes deciding what to wear.",
+        "Standard crosswalk stripes are 24 inches wide.",
+        "A typical apple contains 95 calories.",
+        "The average person spends 26 minutes per day looking for things."
     ];
     
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
@@ -213,9 +275,9 @@ function startBoringFactRotation() {
         slowTypeText('boring-fact-display', 'Boring Fact: ' + fact, 50);
     }
     
-    // Update fact every 30 seconds
+    // Update fact every 15 seconds (more frequent boring interruptions)
     updateBoringFact();
-    setInterval(updateBoringFact, 30000);
+    setInterval(updateBoringFact, 15000);
 }
 
 // Function to simulate reading progress
