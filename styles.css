@@ -294,3 +294,99 @@ input[type="range"]::-moz-range-thumb {
         padding: 15px;
     }
 }
+
+/* Additional styles for extended boring content */
+
+.guide-content, .encyclopedia, .weather-report, .gray-list, .masterclass, 
+.tech-specs, .annual-report, .wall-staring-guide, .mundane-directory, 
+.waiting-study, .elevator-music-analysis, .filing-guide, .beige-study {
+    margin-top: 15px;
+}
+
+.guide-content h3, .encyclopedia h3, .weather-report h3, .masterclass h3,
+.annual-report h3, .wall-staring-guide h3, .mundane-directory h3,
+.waiting-study h3, .elevator-music-analysis h3, .filing-guide h3, .beige-study h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 16px;
+    border-bottom: 1px dotted #cccccc;
+    padding-bottom: 3px;
+}
+
+.guide-content ol, .guide-content ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.guide-content ol li, .guide-content ul li {
+    margin-bottom: 5px;
+}
+
+.encyclopedia p, .weather-report p, .masterclass p, .annual-report p,
+.wall-staring-guide p, .waiting-study p, .elevator-music-analysis p,
+.filing-guide p, .beige-study p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.gray-list ul {
+    margin-left: 25px;
+    columns: 2;
+    column-gap: 30px;
+}
+
+.gray-list li {
+    margin-bottom: 8px;
+    break-inside: avoid;
+}
+
+.tech-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tech-specs td {
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.tech-specs td:first-child {
+    background-color: #f8f8f8;
+    font-weight: normal;
+    width: 40%;
+}
+
+.annual-report ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.mundane-directory ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.mundane-directory h3 {
+    margin-top: 25px;
+}
+
+.waiting-study ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.elevator-music-analysis ul, .filing-guide ul, .beige-study ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+/* Ensure consistent boring typography */
+.guide-content em, .encyclopedia em, .weather-report em, .gray-list em,
+.masterclass em, .annual-report em, .wall-staring-guide em, .mundane-directory em,
+.waiting-study em, .elevator-music-analysis em, .filing-guide em, .beige-study em {
+    font-style: italic;
+    color: #777777;
+}

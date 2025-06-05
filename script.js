@@ -148,3 +148,170 @@ function simulateSlowLoading() {
 window.addEventListener('load', function() {
     simulateSlowLoading();
 });
+
+// Additional boring functions for extended content
+
+// Function to slowly type out boring text
+function slowTypeText(elementId, text, speed = 100) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    element.textContent = '';
+    let i = 0;
+    
+    const typeInterval = setInterval(function() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(typeInterval);
+        }
+    }, speed);
+}
+
+// Add a boring fact generator
+function generateBoringFact() {
+    const facts = [
+        "The average pencil can draw a line 35 miles long.",
+        "A paperclip weighs approximately 1 gram.",
+        "The word 'queue' is the only word in English pronounced the same way when the last four letters are removed.",
+        "Office chairs typically have five wheels for stability reasons.",
+        "The manila folder was invented in the Philippines, hence the name.",
+        "Staplers can typically staple 20 sheets of standard paper.",
+        "The color beige gets its name from natural wool that hasn't been bleached.",
+        "Standard copy paper is 8.5 by 11 inches in the United States.",
+        "File cabinets are usually made of steel for durability.",
+        "The average office worker spends 6 hours a day looking at screens."
+    ];
+    
+    const randomFact = facts[Math.floor(Math.random() * facts.length)];
+    return randomFact;
+}
+
+// Create a boring fact display system
+function startBoringFactRotation() {
+    const factElement = document.createElement('div');
+    factElement.id = 'boring-fact-display';
+    factElement.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 12px;
+        color: #666;
+        max-width: 250px;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    `;
+    
+    document.body.appendChild(factElement);
+    
+    function updateBoringFact() {
+        const fact = generateBoringFact();
+        slowTypeText('boring-fact-display', 'Boring Fact: ' + fact, 50);
+    }
+    
+    // Update fact every 30 seconds
+    updateBoringFact();
+    setInterval(updateBoringFact, 30000);
+}
+
+// Function to simulate reading progress
+function trackReadingProgress() {
+    const progressBar = document.createElement('div');
+    progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background-color: #888;
+        z-index: 1000;
+        transition: width 0.3s ease;
+    `;
+    document.body.appendChild(progressBar);
+    
+    window.addEventListener('scroll', function() {
+        const scrollPercent = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    });
+}
+
+// Add extremely slow image loading simulation (even though we have no images)
+function simulateImageLoading() {
+    // Create placeholder for non-existent images
+    const imagePlaceholders = document.querySelectorAll('.fake-image-placeholder');
+    imagePlaceholders.forEach(function(placeholder, index) {
+        setTimeout(function() {
+            placeholder.style.backgroundColor = '#f0f0f0';
+            placeholder.textContent = 'Image would load here if we had any interesting images to show';
+        }, (index + 1) * 2000);
+    });
+}
+
+// Implement incredibly boring hover effects
+function addBoringHoverEffects() {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#f9f9f9';
+        });
+        
+        section.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = 'transparent';
+        });
+    });
+}
+
+// Create a function that counts everything slowly
+function countEverythingSlowly() {
+    let wordCount = 0;
+    let letterCount = 0;
+    let punctuationCount = 0;
+    
+    const allText = document.body.textContent;
+    const words = allText.split(/\s+/).filter(word => word.length > 0);
+    
+    words.forEach(word => {
+        letterCount += word.replace(/[^\w]/g, '').length;
+        punctuationCount += word.replace(/[\w\s]/g, '').length;
+    });
+    
+    wordCount = words.length;
+    
+    // Display these meaningless statistics somewhere
+    console.log('Total words on this boring page:', wordCount);
+    console.log('Total letters on this boring page:', letterCount);
+    console.log('Total punctuation marks on this boring page:', punctuationCount);
+}
+
+// Initialize all the additional boring features
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(startBoringFactRotation, 3000);
+    setTimeout(trackReadingProgress, 1000);
+    setTimeout(simulateImageLoading, 2000);
+    setTimeout(addBoringHoverEffects, 500);
+    setTimeout(countEverythingSlowly, 5000);
+});
+
+// Add function to make scrolling feel unnecessarily smooth and slow
+function addSlowScrolling() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Call slow scrolling setup
+window.addEventListener('load', addSlowScrolling);
