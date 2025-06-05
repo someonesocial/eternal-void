@@ -1,0 +1,123 @@
+/* Eternal Void - The Most Boring Website Ever */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f5f5f5;
+    color: #666666;
+    line-height: 1.4;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+h1 {
+    color: #888888;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #777777;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #777777;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #666666;
+}
+
+ul {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #666666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    color: #666666;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ddd;
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+}
+
+/* No animations, no transitions, no hover effects - just pure boredom */
+/* Everything is intentionally static and lifeless */
+
+/* Optional: Make everything even more boring on smaller screens */
+@media (max-width: 600px) {
+    body {
+        font-size: 13px;
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+}
